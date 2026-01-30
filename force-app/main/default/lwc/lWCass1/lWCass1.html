@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Onboarding Checklist" icon-name="standard:task">
+
+        <div class="slds-m-around_medium">
+
+            <!-- If data exists -->
+            <template if:true={steps}>
+                <template for:each={steps} for:item="step">
+                    <div key={step.Id} class="slds-p-vertical_x-small slds-border_bottom">
+
+                        <lightning-input
+                            type="checkbox"
+                            label={step.Name}
+                            checked={step.Completed__c}
+                            data-id={step.Id}
+                            onchange={handleCheckboxChange}>
+                        </lightning-input>
+
+                    </div>
+                </template>
+            </template>
+
+            <!-- If no records -->
+            <template if:false={steps}>
+                <p>No onboarding steps found.</p>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

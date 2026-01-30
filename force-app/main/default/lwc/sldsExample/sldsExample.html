@@ -1,0 +1,20 @@
+<template>
+    <div class="slds-form-element">
+        <label class="slds-form-element__label" for="text-input-id-47">
+            <abbr class="slds-required" title="required">*</abbr>
+            Name
+        </label>
+        <div class="slds-form-element__control">
+            <input 
+                type="text" 
+                id="text-input-id-47" 
+                class="slds-input"
+                placeholder="Placeholder text…" 
+                required
+                onchange={handleChange}
+            />
+        </div>
+    </div>
+
+    <p>You entered: {enteredValue}</p>
+</template>

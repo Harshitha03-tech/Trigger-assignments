@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Channel for communication between componentA and ComponentB</description>
+    <isExposed>true</isExposed>
+
+    <lightningMessageFields>
+        <description>Message field</description>
+        <fieldName>message</fieldName>
+    </lightningMessageFields>
+
+    <masterLabel>Component Communication Channel</masterLabel>
+</MessageChannel>

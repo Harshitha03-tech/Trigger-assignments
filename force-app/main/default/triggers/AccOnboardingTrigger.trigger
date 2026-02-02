@@ -31,7 +31,7 @@ trigger AccOnboardingTrigger on Account (after insert)
 }
 }
 insert acclst;
- 
+ gi
 }
  
 }*/

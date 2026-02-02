@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Onboarding Checklist" icon-name="standard:task">
+        <div class="slds-m-around_medium">
+            <template if:true={steps}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={steps}
+                    columns={columns}
+                    hide-checkbox-column="true"
+                    oncellchange={handleCellChange}>
+                </lightning-datatable>
+            </template>
+
+            <template if:true={error}>
+                <p class="slds-text-color_error">
+                    Error: {errorMessage}
+                </p>
+            </template>
+
+            <template if:true={isEmpty}>
+                <p>No onboarding steps found for this account.</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
